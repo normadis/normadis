@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheat Sheet CGP/Notaires/Experts-comptables 2026 — NORMADIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { size: A4; margin: 0; }
+    .no-print { display: none; }
+  }
+  :root {
+    --navy: #0d1f35;
+    --accent: #c0392b;
+    --gold: #b7770d;
+    --light: #f7f5f0;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --border: #ddd8ce;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #e8e4dc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+  .page {
+    width: 794px;
+    background: var(--white);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+    overflow: hidden;
+  }
+  .stripe {
+    height: 6px;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy) 60%, #f0c040 60%, #f0c040 80%, var(--accent) 80%);
+  }
+  .header {
+    background: var(--navy);
+    padding: 20px 28px 18px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 16px;
+  }
+  .header-brand {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: white;
+    line-height: 1.2;
+  }
+  .header-title em { font-style: italic; color: #f0c040; }
+  .header-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 5px;
+    font-weight: 300;
+  }
+  .badge {
+    display: inline-block;
+    background: #f0c040;
+    color: #0d1f35;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+  }
+  .partner {
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+    text-align: right;
+  }
+  .alert {
+    margin: 14px 20px 0;
+    background: #fff8f7;
+    border: 0.5px solid #f5c6bb;
+    border-left: 3px solid var(--accent);
+    border-radius: 2px;
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+  }
+  .alert-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .alert-item {
+    font-size: 10px;
+    color: #7b1f1f;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-left: 0.5px solid #f5c6bb;
+  }
+  .alert-item strong { display: block; font-weight: 500; color: var(--accent); }
+  .grid {
+    padding: 14px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .block {
+    border: 0.5px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .block-header {
+    background: var(--light);
+    padding: 7px 11px;
+    border-bottom: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .block-icon { font-size: 14px; }
+  .block-title { font-size: 11px; font-weight: 500; color: var(--navy); }
+  .block-body { padding: 8px 11px; }
+  .block-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 4px 0;
+    border-bottom: 0.5px solid #f0ede8;
+    font-size: 10.5px;
+    color: var(--text);
+    line-height: 1.45;
+  }
+  .block-item:last-child { border-bottom: none; }
+  .block-item::before { content: '→'; color: #f0c040; font-size: 10px; flex-shrink: 0; margin-top: 1px; }
+  .conclusion {
+    margin: 0 20px 12px;
+    background: #fffdf0;
+    border: 0.5px solid #f0e0a0;
+    border-left: 3px solid #f0c040;
+    border-radius: 2px;
+    padding: 10px 14px;
+    font-size: 11px;
+    color: var(--gold);
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .footer {
+    background: var(--navy);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 15px; color: white; }
+  .footer-logo span { color: #f0c040; }
+  .footer-contact { font-size: 10px; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.6; }
+  .footer-right { font-size: 10px; color: rgba(255,255,255,0.4); text-align: right; line-height: 1.6; }
+  .print-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--navy); color: white; border: none;
+    padding: 12px 20px; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; font-weight: 500;
+    border-radius: 3px; cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  @media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="stripe"></div>
+  <div class="header">
+    <div>
+      <div class="header-brand">NORMADIS · Gouvernance réglementaire · Toulouse</div>
+      <div class="header-title"><em>CGP · Notaires · Experts-comptables</em> 2026<br>Obligations essentielles</div>
+      <div class="header-sub">Sécurisez votre inscription et exercez en toute conformité</div>
+    </div>
+    <div>
+      <div class="badge">Cheat Sheet 2026</div>
+      <div class="partner">ORIAS · OEC · AMF · Bloctel<br>Cabinet BGL Avocat Gladin</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-label">🚨 Deadlines<br>& Sanctions</div>
+    <div class="alert-item"><strong>4 051 CGP radiés</strong>ORIAS en 2026 — urgence maximale</div>
+    <div class="alert-item"><strong>Bloctel obligatoire</strong>Depuis le 11 août 2026</div>
+    <div class="alert-item"><strong>Sanctions</strong>Bloctel : 75 000€ · Formation : 15h/an obligatoires</div>
+  </div>
+
+  <div class="grid">
+    <div class="block">
+      <div class="block-header"><span class="block-icon">📋</span><div class="block-title">Renouvellement ORIAS/OEC annuel</div></div>
+      <div class="block-body">
+        <div class="block-item">Anticiper sereinement la mise à jour annuelle</div>
+        <div class="block-item">Régler les cotisations obligatoires à temps</div>
+        <div class="block-item">Sécuriser l'inscription auprès de votre organisme</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🛡️</span><div class="block-title">RC Pro et garanties obligatoires</div></div>
+      <div class="block-body">
+        <div class="block-item">Actualiser la police d'assurance chaque année</div>
+        <div class="block-item">Vérifier les plafonds de garantie minimums requis</div>
+        <div class="block-item">Transmettre l'attestation à votre autorité compétente</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">📞</span><div class="block-title">Conformité Bloctel démarchage</div></div>
+      <div class="block-body">
+        <div class="block-item">Purger les fichiers clients via la plateforme Bloctel</div>
+        <div class="block-item">Respecter les horaires légaux de prospection téléphonique</div>
+        <div class="block-item">Exercer en toute conformité lors de chaque appel</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🎓</span><div class="block-title">Formation continue 15h/an</div></div>
+      <div class="block-body">
+        <div class="block-item">Suivre 15 heures de formation par an minimum</div>
+        <div class="block-item">Choisir des formations validées par les instances</div>
+        <div class="block-item">Conserver précieusement toutes les attestations</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🔐</span><div class="block-title">RGPD clients et données financières</div></div>
+      <div class="block-body">
+        <div class="block-item">Tenir à jour le registre des traitements</div>
+        <div class="block-item">Sécuriser les données financières des clients</div>
+        <div class="block-item">Informer clairement les clients de leurs droits</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🔍</span><div class="block-title">LCB-FT et Tracfin</div></div>
+      <div class="block-body">
+        <div class="block-item">Identifier précisément chaque bénéficiaire effectif</div>
+        <div class="block-item">Évaluer le profil de risque de chaque client</div>
+        <div class="block-item">Déclarer les opérations suspectes à Tracfin</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="conclusion">
+    🌿 La conformité est le plus beau gage de confiance pour vos clients. Avançons ensemble, pas à pas et en toute sérénité.
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">NOR<span>MADIS</span></div>
+    <div class="footer-contact">Christophe Dura · 06 71 06 96 54<br>normadis.github.io/normadis</div>
+    <div class="footer-right">Cabinet BGL Avocat · Gladin<br>Droit des affaires Toulouse</div>
+  </div>
+</div>
+<button class="print-btn no-print" onclick="window.print()">🖨️ Imprimer / Exporter PDF</button>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheat Sheet New Space Toulouse 2026 — NORMADIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { size: A4; margin: 0; }
+    .no-print { display: none; }
+  }
+  :root {
+    --navy: #0d1f35;
+    --accent: #c0392b;
+    --space: #1a0a3a;
+    --purple: #7d3c98;
+    --light: #f7f5f0;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --border: #ddd8ce;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #e8e4dc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+  .page {
+    width: 794px;
+    background: var(--white);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+    overflow: hidden;
+  }
+  .stripe {
+    height: 6px;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy) 60%, #9b59b6 60%, #9b59b6 80%, var(--accent) 80%);
+  }
+  .header {
+    background: var(--space);
+    padding: 20px 28px 18px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: '🚀';
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    font-size: 120px;
+    opacity: 0.06;
+    transform: rotate(45deg);
+  }
+  .header-brand {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: white;
+    line-height: 1.2;
+  }
+  .header-title em { font-style: italic; color: #9b59b6; }
+  .header-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 5px;
+    font-weight: 300;
+  }
+  .badge {
+    display: inline-block;
+    background: #9b59b6;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+  }
+  .partner {
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+    text-align: right;
+  }
+  .alert {
+    margin: 14px 20px 0;
+    background: #fff8f7;
+    border: 0.5px solid #f5c6bb;
+    border-left: 3px solid var(--accent);
+    border-radius: 2px;
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+  }
+  .alert-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .alert-item {
+    font-size: 10px;
+    color: #7b1f1f;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-left: 0.5px solid #f5c6bb;
+  }
+  .alert-item strong { display: block; font-weight: 500; color: var(--accent); }
+  .grid {
+    padding: 14px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .block {
+    border: 0.5px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .block-header {
+    background: var(--light);
+    padding: 7px 11px;
+    border-bottom: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .block-icon { font-size: 14px; }
+  .block-title { font-size: 11px; font-weight: 500; color: var(--navy); }
+  .block-body { padding: 8px 11px; }
+  .block-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 4px 0;
+    border-bottom: 0.5px solid #f0ede8;
+    font-size: 10.5px;
+    color: var(--text);
+    line-height: 1.45;
+  }
+  .block-item:last-child { border-bottom: none; }
+  .block-item::before { content: '→'; color: #9b59b6; font-size: 10px; flex-shrink: 0; margin-top: 1px; }
+  .footer {
+    background: var(--space);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 15px; color: white; }
+  .footer-logo span { color: #9b59b6; }
+  .footer-contact { font-size: 10px; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.6; }
+  .footer-right { font-size: 10px; color: rgba(255,255,255,0.4); text-align: right; line-height: 1.6; }
+  .print-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--space); color: white; border: none;
+    padding: 12px 20px; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; font-weight: 500;
+    border-radius: 3px; cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  @media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="stripe"></div>
+  <div class="header">
+    <div>
+      <div class="header-brand">NORMADIS · Gouvernance réglementaire · Toulouse</div>
+      <div class="header-title"><em>New Space Toulouse</em> 2026<br>Obligations réglementaires essentielles</div>
+      <div class="header-sub">Sécurisez votre développement spatial face aux exigences 2026</div>
+    </div>
+    <div>
+      <div class="badge">Cheat Sheet 2026</div>
+      <div class="partner">CNES · CRA · NIS2 · AI Act<br>Cabinet BGL Avocat Gladin</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-label">🚨 Deadlines<br>& Sanctions</div>
+    <div class="alert-item"><strong>NIS2 spatial</strong>Application stricte automne 2026</div>
+    <div class="alert-item"><strong>AI Act autonome</strong>2 août 2026 · CRA : 15M€ sanctions</div>
+    <div class="alert-item"><strong>Export control</strong>ITAR/EAR — sanctions pénales possibles</div>
+  </div>
+
+  <div class="grid">
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🚀</span><div class="block-title">Conformité réglementaire spatiale</div></div>
+      <div class="block-body">
+        <div class="block-item">Obtenir l'autorisation d'exploitation spatiale nationale</div>
+        <div class="block-item">Déclarer tous les lancements auprès du CNES</div>
+        <div class="block-item">Assurer la gestion durable des débris spatiaux</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🛰️</span><div class="block-title">Cybersécurité systèmes embarqués CRA</div></div>
+      <div class="block-body">
+        <div class="block-item">Intégrer la sécurité dès la conception matérielle</div>
+        <div class="block-item">Éliminer rapidement les vulnérabilités logicielles</div>
+        <div class="block-item">Certifier la conformité CE des composants</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🤖</span><div class="block-title">AI Act systèmes autonomes spatiaux</div></div>
+      <div class="block-body">
+        <div class="block-item">Documenter les algorithmes de navigation autonome</div>
+        <div class="block-item">Évaluer les risques des modèles IA embarqués</div>
+        <div class="block-item">Garantir le contrôle humain sur les systèmes</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🌍</span><div class="block-title">Export control et ITAR/EAR</div></div>
+      <div class="block-body">
+        <div class="block-item">Identifier la provenance de chaque composant américain</div>
+        <div class="block-item">Obtenir les licences d'exportation requises en amont</div>
+        <div class="block-item">Contrôler strictement l'accès aux technologies sensibles</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🤝</span><div class="block-title">Sécurité supply chain spatiale</div></div>
+      <div class="block-body">
+        <div class="block-item">Évaluer le niveau de sécurité des sous-traitants</div>
+        <div class="block-item">Signer des accords de confidentialité très stricts</div>
+        <div class="block-item">Sécuriser les échanges de données techniques</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block-header"><span class="block-icon">🏢</span><div class="block-title">NIS2 infrastructures critiques</div></div>
+      <div class="block-body">
+        <div class="block-item">Protéger les stations au sol contre les cyberattaques</div>
+        <div class="block-item">Signaler rapidement tout incident de sécurité majeur</div>
+        <div class="block-item">Anticiper sereinement la résilience des réseaux</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">NOR<span>MADIS</span></div>
+    <div class="footer-contact">Christophe Dura · 06 71 06 96 54<br>normadis.github.io/normadis</div>
+    <div class="footer-right">Cabinet BGL Avocat · Gladin<br>Droit des affaires Toulouse</div>
+  </div>
+</div>
+<button class="print-btn no-print" onclick="window.print()">🖨️ Imprimer / Exporter PDF</button>
+</body>
+</html>
